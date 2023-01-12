@@ -1,4 +1,4 @@
-package com.pontoponto.newarchitecture.components;
+package com.pontoponto.app.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

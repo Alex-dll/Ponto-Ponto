@@ -1,4 +1,4 @@
-package com.pontoponto.newarchitecture;
+package com.pontoponto.app.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -20,9 +20,9 @@ import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.pontoponto.BuildConfig;
-import com.pontoponto.newarchitecture.components.MainComponentsRegistry;
-import com.pontoponto.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.pontoponto.app.BuildConfig;
+import com.pontoponto.app.newarchitecture.components.MainComponentsRegistry;
+import com.pontoponto.app.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

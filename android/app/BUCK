@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.pontoponto",
+    package = "com.pontoponto.app",
 )
 
 android_resource(
     name = "res",
-    package = "com.pontoponto",
+    package = "com.pontoponto.app",
     res = "src/main/res",
 )
 

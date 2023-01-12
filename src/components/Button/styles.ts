@@ -8,7 +8,7 @@ interface IContainerButton {
 }
 
 export const ContainerButton = styled.TouchableOpacity<IContainerButton>`
-  padding: 12px 0;
+  padding: 12px;
   background-color: ${({ color, mode }) => {
     if (mode === 'outline') {
       return 'transparent';

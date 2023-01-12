@@ -1,4 +1,4 @@
-package com.pontoponto;
+package com.pontoponto.app;
 
 import android.os.Build;
 import android.os.Bundle;
