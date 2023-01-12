@@ -1,0 +1,37 @@
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Appearance } from "react-native";
+import { themeDark } from "../../constants/styles/themes/dark";
+import { themeLight } from "../../constants/styles/themes/light";
+import { AppearanceProps, colorSchemeProps, themeType } from "./types";
+
+const useAppearance = (): AppearanceProps => {
+  const [currentTheme, setCurrentTheme] = useState<themeType>(
+    Appearance.getColorScheme() || "light"
+  );
+
+  const handleChangeAppearance = useCallback(
+    ({ colorScheme }: colorSchemeProps) => {
+      if (colorScheme) {
+        setCurrentTheme(colorScheme);
+      }
+    },
+    []
+  );
+
+  const theme = useMemo(() => {
+    if (currentTheme === "light") {
+      return themeLight;
+    }
+    return themeDark;
+  }, [currentTheme]);
+
+  useEffect(() => {
+    Appearance.addChangeListener(handleChangeAppearance);
+
+    return () => Appearance.addChangeListener(handleChangeAppearance).remove();
+  }, [handleChangeAppearance]);
+
+  return { currentTheme, theme };
+};
+
+export default useAppearance;
