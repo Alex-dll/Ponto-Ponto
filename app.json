@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Ponto-Ponto",
+    "slug": "Ponto-Ponto",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
