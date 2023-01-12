@@ -1,4 +1,10 @@
 {
-  "compilerOptions": {},
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": [
+      "react-native",
+      "styled-components-react-native"
+    ],
+  },
   "extends": "expo/tsconfig.base"
 }
