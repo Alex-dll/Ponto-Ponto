@@ -7,8 +7,8 @@ export const typographyCommon: Typography = {
     fontFamily: Fonts.openSansLight,
   },
   h2: {
-    fontSize: 60,
-    fontFamily: Fonts.openSansLight,
+    fontSize: 64,
+    fontFamily: Fonts.comfortaaBold,
   },
   h3: {
     fontSize: 48,
@@ -16,15 +16,15 @@ export const typographyCommon: Typography = {
   },
   h4: {
     fontSize: 32,
-    fontFamily: Fonts.montserratBold,
+    fontFamily: Fonts.comfortaaBold,
   },
   h5: {
     fontSize: 24,
-    fontFamily: Fonts.montserratSemiBold,
+    fontFamily: Fonts.comfortaaSemiBold,
   },
   h6: {
     fontSize: 20,
-    fontFamily: Fonts.montserratRegular,
+    fontFamily: Fonts.comfortaaRegular,
   },
   subtitle1: {
     fontSize: 16,

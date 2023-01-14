@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { createContext } from 'react';
 import { Alert, SafeAreaView, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 
 import { ThemeProvider } from 'styled-components';
 
 import {
-  Montserrat_300Light,
-  Montserrat_400Regular,
-  Montserrat_600SemiBold,
-  Montserrat_700Bold,
-} from '@expo-google-fonts/montserrat';
+  Comfortaa_300Light,
+  Comfortaa_400Regular,
+  Comfortaa_600SemiBold,
+  Comfortaa_700Bold,
+} from '@expo-google-fonts/comfortaa';
 
 import {
   OpenSans_300Light,
@@ -20,16 +20,19 @@ import {
 } from '@expo-google-fonts/open-sans';
 
 import useAppearance from './src/hooks/useAppearance';
-import Text from './src/components/Text';
 import Button from './src/components/Button';
+import DigitalClock from './src/components/DigitalClock';
 
 export default function App() {
   const { theme } = useAppearance();
+
+  const StoreContext = createContext({});
+
   let [fontsLoaded] = useFonts({
-    Montserrat_300Light,
-    Montserrat_400Regular,
-    Montserrat_600SemiBold,
-    Montserrat_700Bold,
+    Comfortaa_300Light,
+    Comfortaa_400Regular,
+    Comfortaa_600SemiBold,
+    Comfortaa_700Bold,
 
     OpenSans_300Light,
     OpenSans_400Regular,
@@ -42,24 +45,27 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar style="auto" translucent />
-      <SafeAreaView style={styles.container}>
-        <Button
-          color="primary"
-          onPress={() => Alert.alert('Entrada', 'Nova entrada registrada')}
-        >
-          Ponto Ponto
-        </Button>
-      </SafeAreaView>
-    </ThemeProvider>
+    <StoreContext.Provider value={StoreContext}>
+      <ThemeProvider theme={theme}>
+        <StatusBar style="auto" translucent />
+        <SafeAreaView style={styles.container}>
+          <DigitalClock />
+          <Button
+            color="primary"
+            onPress={() => Alert.alert('Entrada', 'Nova entrada registrada')}
+          >
+            Ponto Ponto
+          </Button>
+        </SafeAreaView>
+      </ThemeProvider>
+    </StoreContext.Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#FFF',
     color: '#fff',
     alignItems: 'center',
     justifyContent: 'center',

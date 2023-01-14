@@ -22,7 +22,7 @@ export const themeLight: DefaultTheme = {
       onMain: Colors.black,
     },
     surface: {
-      main: Colors.black,
+      main: Colors.neutrais,
       onMain: Colors.white,
     },
   },
