@@ -1,3 +1,7 @@
-export type NameIconsTypes = "name of icon";
+import clock from '../assets/icons/clock.png';
 
-export default {};
+export type NameIconsTypes = 'clock';
+
+export default {
+  clock,
+};
